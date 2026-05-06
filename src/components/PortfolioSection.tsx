@@ -2,36 +2,44 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const gallery = [
   {
-    title: "Арест",
-    category: "Акт первый",
-    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/faa11a98-8e51-4c83-b931-1dc51eef8c4c.jpg",
+    title: "До войны",
+    category: "Пролог",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/d967a820-cd63-46c9-b392-f6d871f1b562.JPG",
     description:
-      "1937 год. Священника Арсения арестовывают. Начинается путь через допросы, этапы и пересыльные лагеря. Но внутри него — тишина.",
-    tags: ["1937", "Арест", "Начало пути"],
+      "Мирная жизнь до репрессий. Молодость, любовь, надежды — всё то, что будет отнято, но не забыто.",
+    tags: ["Пролог", "До войны", "Молодость"],
+  },
+  {
+    title: "Война пришла",
+    category: "Акт первый",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/03f6299b-57eb-4b7e-8232-b9b8eff350fa.JPG",
+    description:
+      "На фоне взрывов и обломков эпохи — двое. Книга в руках как единственная опора. Мир рушится, но человек стоит.",
+    tags: ["Война", "1941", "Испытание"],
   },
   {
     title: "Лагерь особого режима",
     category: "Акт второй",
-    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/c049df10-adcc-4aca-a57d-458fd57c9fca.jpg",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/b420535b-d989-4a62-bfcb-76936078d11b.JPG",
     description:
-      "Барак, холод, голод. Арсений становится для заключённых не только священником, но и человеком, рядом с которым можно оставаться собой.",
-    tags: ["Лагерь", "Вера", "Братство"],
+      "Заключённые под свинцовым небом. Руки сжимают верёвки — удержаться, выжить, не сломаться. Братство рождается в невыносимых условиях.",
+    tags: ["Лагерь", "Братство", "Выживание"],
   },
   {
-    title: "Ночная исповедь",
+    title: "Советская система",
     category: "Ключевая сцена",
-    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/c049df10-adcc-4aca-a57d-458fd57c9fca.jpg",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/19892b25-59c6-47d1-b7aa-68e4f3142e35.JPG",
     description:
-      "Одна из самых пронзительных сцен спектакля — ночная исповедь в бараке. Слова, которые нельзя произносить вслух, но которые всё равно звучат.",
-    tags: ["Исповедь", "Ночь", "Тайна"],
+      "Пионеры, портреты вождей, лозунги. Машина идеологии работает исправно — но вера живёт вопреки.",
+    tags: ["СССР", "Идеология", "Противостояние"],
   },
   {
-    title: "Возвращение",
-    category: "Финал",
-    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/a7b0f0ea-ebb5-48ad-a37d-693b92e96846.jpg",
+    title: "Отец Арсений",
+    category: "Центральный образ",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/2b56b40f-0f7f-40f6-8244-56b8a1bccf74.JPG",
     description:
-      "После многих лет лагерей — выход на свободу. Но что значит свобода для человека, который сохранил себя даже в заключении?",
-    tags: ["Свобода", "Возвращение", "Итог"],
+      "Священник с номером на груди стоит прямо, пока вокруг всё согнуто. Это и есть главный ответ спектакля — на вопрос о том, что значит быть человеком.",
+    tags: ["Арсений", "Достоинство", "Вера"],
   },
 ]
 
@@ -50,13 +58,13 @@ export function PortfolioSection() {
           {gallery.map((item, index) => (
             <Card
               key={index}
-              className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300"
+              className={`group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 ${index === 4 ? "md:col-span-2" : ""}`}
             >
-              <div className="relative overflow-hidden aspect-video bg-muted flex items-center justify-center">
+              <div className={`relative overflow-hidden bg-muted ${index === 4 ? "aspect-[21/9]" : "aspect-video"}`}>
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute bottom-4 left-6">
