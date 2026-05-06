@@ -16,8 +16,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("[v0] Form submitted:", formData)
-    // Handle form submission
+    console.log("[contact] Form submitted:", formData)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,10 +37,10 @@ export function ContactSection() {
             Контакты
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Давайте <span className="text-primary">создавать вместе</span>
+            Хотите <span className="text-primary">на спектакль?</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Готовы воплотить ваши цифровые амбиции? Свяжитесь с нами без обязательств и узнайте, чем мы можем помочь.
+            Напишите нам — мы расскажем о ближайших показах, ответим на вопросы и поможем с билетами для группы.
           </p>
         </div>
 
@@ -49,15 +48,13 @@ export function ContactSection() {
           <div className="lg:col-span-2">
             <Card className="border-none shadow-xl bg-background">
               <CardHeader>
-                <CardTitle className="text-2xl">Напишите нам</CardTitle>
+                <CardTitle className="text-2xl">Написать организаторам</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        Имя *
-                      </label>
+                      <label htmlFor="name" className="text-sm font-medium">Имя *</label>
                       <Input
                         id="name"
                         name="name"
@@ -69,9 +66,7 @@ export function ContactSection() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        E-mail *
-                      </label>
+                      <label htmlFor="email" className="text-sm font-medium">E-mail *</label>
                       <Input
                         id="email"
                         name="email"
@@ -85,9 +80,7 @@ export function ContactSection() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium">
-                      Телефон
-                    </label>
+                    <label htmlFor="phone" className="text-sm font-medium">Телефон</label>
                     <Input
                       id="phone"
                       name="phone"
@@ -99,15 +92,13 @@ export function ContactSection() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Сообщение *
-                    </label>
+                    <label htmlFor="message" className="text-sm font-medium">Сообщение *</label>
                     <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Расскажите о вашем проекте..."
+                      placeholder="Хочу купить билеты / вопрос о спектакле / групповой визит..."
                       rows={6}
                       required
                       className="transition-all focus:scale-[1.02]"
@@ -131,7 +122,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">E-mail</h3>
-                    <p className="text-sm text-muted-foreground">hello@example.com</p>
+                    <p className="text-sm text-muted-foreground">info@spectakl-arseniy.ru</p>
                   </div>
                 </div>
               </CardContent>
@@ -145,7 +136,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Телефон</h3>
-                    <p className="text-sm text-muted-foreground">+7 900 123-45-67</p>
+                    <p className="text-sm text-muted-foreground">+7 (495) 000-00-00</p>
                   </div>
                 </div>
               </CardContent>
@@ -158,11 +149,10 @@ export function ContactSection() {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Время работы</h3>
+                    <h3 className="font-semibold mb-1">Место проведения</h3>
                     <p className="text-sm text-muted-foreground">
-                      Пн - Пт: 9:00 - 18:00
-                      <br />
-                      Выходные: по договоренности
+                      ДК «Подмосковье»<br />
+                      Красногорск, Московская обл.
                     </p>
                   </div>
                 </div>

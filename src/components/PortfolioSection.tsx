@@ -1,43 +1,37 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
-const projects = [
+const gallery = [
   {
-    title: "Умный помощник по выборам",
-    category: "AI/ML и веб-разработка",
-    image: "/omgekeerdestemwijzer-banner.png",
+    title: "Арест",
+    category: "Акт первый",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/faa11a98-8e51-4c83-b931-1dc51eef8c4c.jpg",
     description:
-      "AI-приложение для выборов. Пользователи задают вопросы о позициях партий и получают 100% фактические ответы из официальных программ с использованием RAG-технологии.",
-    url: "https://de-omgekeerde-stemwijzer.onrender.com/",
-    tags: ["Next.js", "AI/ML", "RAG", "TypeScript"],
+      "1937 год. Священника Арсения арестовывают. Начинается путь через допросы, этапы и пересыльные лагеря. Но внутри него — тишина.",
+    tags: ["1937", "Арест", "Начало пути"],
   },
   {
-    title: "Автомойка Tahsin",
-    category: "Веб-дизайн и разработка",
-    image: "/autopoetsbedrijf-tahsin-project.png",
+    title: "Лагерь особого режима",
+    category: "Акт второй",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/c049df10-adcc-4aca-a57d-458fd57c9fca.jpg",
     description:
-      "Профессиональный сайт для автомойки с 20-летним опытом. Полная презентация услуг, автомойки и гаража с современным адаптивным дизайном.",
-    url: "https://www.autopoetsbedrijftahsin.nl/",
-    tags: ["React", "Next.js", "Tailwind CSS"],
+      "Барак, холод, голод. Арсений становится для заключённых не только священником, но и человеком, рядом с которым можно оставаться собой.",
+    tags: ["Лагерь", "Вера", "Братство"],
   },
   {
-    title: "Кадровое агентство CAN",
-    category: "Веб-разработка",
-    image: "/can-uitzendbureau-project.png",
+    title: "Ночная исповедь",
+    category: "Ключевая сцена",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/c049df10-adcc-4aca-a57d-458fd57c9fca.jpg",
     description:
-      "Кадровое агентство с 30-летним опытом в садоводческом секторе. Сайт с обзором услуг и прямыми контактами для работодателей и соискателей.",
-    url: "https://canbv.nl/",
-    tags: ["Next.js", "React", "Tailwind CSS"],
+      "Одна из самых пронзительных сцен спектакля — ночная исповедь в бараке. Слова, которые нельзя произносить вслух, но которые всё равно звучат.",
+    tags: ["Исповедь", "Ночь", "Тайна"],
   },
   {
-    title: "Портфолио Murat Sahin",
-    category: "Портфолио-сайт",
-    image: "/murat-sahin-portfolio.png",
+    title: "Возвращение",
+    category: "Финал",
+    image: "https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/files/a7b0f0ea-ebb5-48ad-a37d-693b92e96846.jpg",
     description:
-      "Профессиональное портфолио full-stack разработчика. Демонстрация проектов, навыков и опыта с современным минималистичным дизайном и темной темой.",
-    url: "https://murat-sahin-dev.vercel.app/",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", ".NET Core"],
+      "После многих лет лагерей — выход на свободу. Но что значит свобода для человека, который сохранил себя даже в заключении?",
+    tags: ["Свобода", "Возвращение", "Итог"],
   },
 ]
 
@@ -46,41 +40,34 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Наше портфолио</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Галерея спектакля</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Ознакомьтесь с подборкой наших последних проектов и узнайте, как мы помогаем бизнесу расти с помощью мощных цифровых решений.
+            Ключевые сцены и образы постановки — путь отца Арсения от ареста до возвращения.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {gallery.map((item, index) => (
             <Card
               key={index}
               className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-video bg-muted flex items-center justify-center">
                 <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    className="gap-2"
-                    onClick={() => window.open(project.url, "_blank")}
-                  >
-                    Открыть проект <ExternalLink className="h-4 w-4" />
-                  </Button>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
+                <div className="absolute bottom-4 left-6">
+                  <span className="text-white/80 text-sm font-medium">{item.category}</span>
                 </div>
               </div>
               <CardContent className="p-6">
-                <p className="text-sm text-primary font-semibold mb-2">{project.category}</p>
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
+                  {item.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
                       {tag}
                     </span>

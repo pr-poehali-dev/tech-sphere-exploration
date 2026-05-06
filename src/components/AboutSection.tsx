@@ -2,19 +2,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, Sparkles } from "lucide-react"
 
 const values = [
-  { title: "Качество", description: "Высококлассные решения, соответствующие самым высоким стандартам" },
-  { title: "Доступность", description: "Профессиональные сайты по честным и прозрачным ценам" },
-  { title: "Прозрачность", description: "Четкая коммуникация без скрытых платежей" },
-  { title: "Клиентоориентированность", description: "Ваши цели и пожелания всегда в приоритете" },
-  { title: "Масштабируемость", description: "Сайты, которые растут вместе с вашим бизнесом" },
-  { title: "Гибкость", description: "Быстрая адаптация под меняющиеся потребности" },
+  { title: "Реальная история", description: "Спектакль основан на документальной книге — свидетельствах реальных людей, знавших отца Арсения" },
+  { title: "Духовная глубина", description: "Фокус не на страданиях, а на внутренней жизни человека — вере, любви, стойкости духа" },
+  { title: "Сильный режиссёр", description: "Постановка Алексея Свиридова — вдумчивый разговор о смысле жизни через живой театр" },
+  { title: "Для широкой аудитории", description: "Спектакль понятен и верующим, и светской публике — это история о человеческом достоинстве" },
+  { title: "Премьера в Пасху", description: "Первый показ прошёл 19 апреля 2026 года в рамках Епархиального Пасхального концерта-спектакля" },
+  { title: "Живое переживание", description: "Театр как пространство встречи — с историей, с собой, с тем, что важно" },
 ]
 
 const stats = [
-  { number: "50+", label: "Проектов" },
-  { number: "45+", label: "Довольных клиентов" },
-  { number: "30+", label: "Созданных логотипов" },
-  { number: "3+", label: "Года опыта" },
+  { number: "1937–53", label: "Годы репрессий" },
+  { number: "19 апр", label: "Премьера 2026" },
+  { number: "100%", label: "Реальные события" },
+  { number: "∞", label: "Сила духа" },
 ]
 
 export function AboutSection() {
@@ -27,19 +27,19 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
             <Sparkles className="h-4 w-4" />
-            О CodeCraft
+            О спектакле
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Качество, которое{" "}
+            История, которая{" "}
             <span className="text-primary relative">
-              впечатляет
+              не отпускает
               <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
                 <path d="M0 4C50 2 150 6 200 4" stroke="currentColor" strokeWidth="2" className="text-primary" />
               </svg>
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Создание сайта не должно быть дорогим. Мы разрабатываем индивидуальные решения, которые идеально соответствуют пожеланиям каждого клиента.
+            Священник Арсений прошёл аресты, ссылки и лагеря особого режима. Книга и спектакль — о том, что происходит внутри человека, когда снаружи ад. О вере, которая не гаснет.
           </p>
         </div>
 
