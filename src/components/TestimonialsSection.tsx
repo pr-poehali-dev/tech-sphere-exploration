@@ -60,8 +60,16 @@ export function TestimonialsSection() {
   }, [])
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 overflow-hidden">
-      <div className="container mx-auto max-w-7xl">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 overflow-hidden relative">
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/b6046400-93d7-43ab-9df1-e61831ce04e4.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      <div className="container mx-auto max-w-7xl relative z-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-balance">
           Что говорят зрители
         </h2>

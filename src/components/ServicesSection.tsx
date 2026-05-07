@@ -44,6 +44,14 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 animate-pulse" />
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/21be62a8-24d4-42f6-84fd-47527adb863f.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mx-auto block w-fit">

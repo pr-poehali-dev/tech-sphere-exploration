@@ -30,6 +30,14 @@ export function ContactSection() {
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
       <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/ebc9a21b-8fc1-4d8a-8492-4e57034b4a7a.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-16">

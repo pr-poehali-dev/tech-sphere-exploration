@@ -31,6 +31,14 @@ export function ProcessSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/5ca81d1d-adc3-4d22-a2ba-fee74e587b28.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-16">
