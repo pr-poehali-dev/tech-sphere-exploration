@@ -21,7 +21,7 @@ export function HeroSection() {
         style={{
           backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/ec81a958-ea17-453d-9b23-9d4edf9e5dfc.JPG')",
           backgroundSize: "cover",
-          backgroundPosition: "center 15%",
+          backgroundPosition: "70% -10%",
           backgroundRepeat: "no-repeat",
         }}
       />
