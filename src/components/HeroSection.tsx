@@ -26,7 +26,7 @@ export function HeroSection() {
         }}
       />
       {/* Dark overlay to keep text readable */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -44,7 +44,7 @@ export function HeroSection() {
         </span>
         <span
           className="absolute text-muted-foreground/15 animate-float text-4xl"
-          style={{ top: "25%", right: "20%", animationDelay: "2s" }}
+          style={{ top: "calc(25% + 200px)", right: "20%", animationDelay: "2s" }}
         >
           🕯
         </span>
