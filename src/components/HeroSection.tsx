@@ -15,15 +15,20 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background photo */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/ec81a958-ea17-453d-9b23-9d4edf9e5dfc.JPG')",
+          backgroundSize: "cover",
+          backgroundPosition: "center 15%",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      {/* Dark overlay to keep text readable */}
+      <div className="absolute inset-0 bg-black/60" />
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute w-[500px] h-[500px] rounded-full bg-muted/40 blur-3xl animate-pulse"
-          style={{ top: "20%", left: "10%", animationDuration: "4s" }}
-        />
-        <div
-          className="absolute w-[400px] h-[400px] rounded-full bg-muted/30 blur-3xl animate-pulse"
-          style={{ bottom: "10%", right: "15%", animationDuration: "6s", animationDelay: "1s" }}
-        />
         <div
           className="absolute w-[300px] h-[300px] rounded-full bg-muted/20 blur-3xl transition-all duration-1000 ease-out"
           style={{ left: `${mousePosition.x - 150}px`, top: `${mousePosition.y - 150}px` }}
