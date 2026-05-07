@@ -19,9 +19,9 @@ export function HeroSection() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/ec81a958-ea17-453d-9b23-9d4edf9e5dfc.JPG')",
+          backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/fcc4f47e-5570-4d37-9be2-9ca9a402aec8.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center 15%",
+          backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
         }}
       />
