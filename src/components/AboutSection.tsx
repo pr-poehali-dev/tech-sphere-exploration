@@ -23,13 +23,14 @@ export function AboutSection() {
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div
-        className="absolute inset-0 opacity-8"
+        className="absolute inset-0 opacity-[0.15]"
         style={{
           backgroundImage: "url('https://cdn.poehali.dev/projects/38bd8748-7863-4338-8fb5-afab16e20535/bucket/a3e53fb4-d3e1-4763-8b25-1a7c9450aca9.JPG')",
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}
       />
+      <div className="absolute inset-0 bg-black/30" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-16">
